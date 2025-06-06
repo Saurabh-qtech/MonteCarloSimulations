@@ -2,6 +2,7 @@ In this repo, I demostrate Python implementations of applications of advanced Mo
 Projects included in this repo :
 
 i. American Option Pricing via Monte Carlo Simulation (Regression Method I)
+
 ii. Modular Continuation Value Estimation & Pricing
 
 
