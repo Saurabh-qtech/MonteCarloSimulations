@@ -1,0 +1,10 @@
+The method simulates geometric Brownian motion paths and uses Longstaff-Schwartz-style regression (polynomial of degree 3) to estimate the continuation value of American options. 
+The explicit Euler scheme is used to simulate asset paths under the risk-neutral measure.
+
+Application : Used for pricing American options, which can be exercised at any time before maturity—particularly important in real-world equity options and commodity markets.
+
+Shortcomings:
+
+i. Bias from Regression: The polynomial regression may underfit or overfit in regions with sparse path data.
+ii. Computational Cost: Finer time steps (e.g., Δt = 0.001) significantly improve precision but come with a steep increase in computation time.
+iii. Only Regression I: This uses a single-pass backward induction, which may not be as accurate as more sophisticated methods (e.g., Regression II or dual methods).
