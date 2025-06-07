@@ -1,0 +1,12 @@
+This extension builds a more modular codebase using functions for simulating paths, computing continuation values, and pricing via regression-based Monte Carlo.
+The continuation value is estimated using cubic polynomial regression at each exercise point, consistent with Least-Squares Monte Carlo (LSMC).
+
+Application:
+Allows for scalable, extensible valuation of American-style options and potentially other early-exercise derivatives.
+Modular functions can be reused for Bermudan or path-dependent options.
+
+Shortcomings:
+
+i. No Variance Reduction Techniques: Standard Monte Carlo simulation is used without antithetic variates or control variates, limiting efficiency.
+ii. Error Sensitivity: Numerical errors accumulate with high volatility (σ = 0.75) and small Δt due to lack of adaptive time-stepping or stability checks.
+iii. Overfitting Risk: High-degree polynomials may overfit noise in simulated paths—especially problematic in regions with few in-the-money samples.
